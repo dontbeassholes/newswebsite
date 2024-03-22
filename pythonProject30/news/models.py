@@ -18,7 +18,7 @@ class CategoryModel(models.Model):
 
 class NewsModel(models.Model):
     news_title = models.CharField(max_length=30)
-    news_description = models.TextField
+    news_description = models.TextField(max_length=100)
     news_image = models.FileField(upload_to="news_images")
     news_created_at = models.DateTimeField(auto_now_add=True)
 
